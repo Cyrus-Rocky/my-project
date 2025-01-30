@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid practice</title>
+</head>
+
+<style>
+    :root {
+        --color: rgb(56, 63, 63);
+        --color2: rgb(190, 190, 190);
+        --color3: rgb(122, 122, 122);
+        --color4: whitesmoke;
+    }
+
+    * {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    body {
+        background-color: rgb(180, 180, 180);
+        height: 100vh;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 3fr;
+        background-color: rgb(56, 63, 63);
+        grid-template-areas:
+            "header header header "
+            "formbody formbody formbody"
+            "footer footer footer"
+        ;
+        height: 100vh;
+        padding: 10px;
+    }
+
+    .header {
+        background-color: rgb(190, 190, 190);
+        grid-area: header;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        gap: 20px;
+        border-radius: 10px;
+        padding: 10px;
+        color: var(--color2);
+        font-weight: bold;
+
+    }
+
+    .formbody {
+        grid-area: formbody;
+        /* border: 2px solid green; */
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formbody h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        color: var(--color2);
+    }
+
+    .form {
+        width: 500px;
+        height: 300px;
+        box-shadow: 5px 5px 5px rgb(155, 97, 97);
+        /* background-color: var(--color); */
+        border: 10px solid black;
+    }
+
+    .footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        background-color: rgb(122, 122, 122);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        height: 50px;
+
+    }
+
+    .img {
+        width: 90px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .navbar {
+        gap: 20px;
+        display: flex;
+        text-decoration: none;
+    }
+
+    .navbar a {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar a:hover {
+        background-color: rgb(122, 122, 122);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: var(--color);
+    }
+
+    .fieldset {
+        /* width: 50%; */
+        color: var(--color2);
+
+
+    }
+
+    .personal {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    .fieldset legend {
+        font-size: 14px;
+    }
+
+    .fieldset input {
+        width: 300px;
+        padding: 10px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid var(--color3);
+    }
+
+    .fieldset input:focus {
+        background-color: var(--color2);
+        border-radius: 5px;
+    }
+
+    .inline-field {
+        margin-bottom: 20px;
+    }
+
+    .inline-field2 {
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        padding: 10px;
+        margin: 15px auto;
+        border-radius: 10px;
+        font-size: 1em;
+        border: none;
+        font-weight: bold;
+        transition: all 0.3s cubic-bezier(1, 1, 1, 1);
+    }
+
+    .btn:hover {
+        box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.2)
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo.jpg" alt="Cyrus logo" class="img">
+            <div class="navbar">
+                <a href="#" class="nav-link">LOGIN</a>
+                <a href="#" class="nav-link">ABOUT</a>
+                <a href="#" class="nav-link">PROJECT</a>
+            </div>
+        </div>
+        <div class="formbody">
+            <form action="#">
+                <h2>LOGIN</h2>
+                <fieldset class="fieldset">
+                    <legend class="personal">Personal information:</legend>
+
+                    <fieldset class="inline-field">
+                        <legend>Email: </legend>
+                        <input type="text" placeholder="Enter email here">
+
+                    </fieldset>
+
+                    <fieldset class="inline-field2">
+                        <legend>Password: </legend>
+                        <input type="password" placeholder="Enter password here">
+
+                    </fieldset>
+                </fieldset>
+
+                <button type="submit" class="btn">Login</button>
+
+
+            </form>
+        </div>
+        <div class="footer">&#169 Cyrus 2025</div>
+    </div>
+
+</body>
+
+</html>

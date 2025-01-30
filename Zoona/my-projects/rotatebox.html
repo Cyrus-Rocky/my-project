@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .box {
+        height: 200px;
+        width: 200px;
+        background: linear-gradient(to right, red, rgb(126, 126, 223));
+        text-align: center;
+        color: bisque;
+        font-size: 2em;
+        animation: animate 3s cubic-bezier(1, 1, 1, 1);
+        animation-iteration-count: 1;
+    }
+
+    @keyframes animate {
+         0% {}
+
+         50% {
+            transform: rotate(360deg);
+            border-radius: 100px;
+        }
+
+        100% {
+            transform: rotate(0);
+        }
+
+    } */
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .box {
+        display: flex;
+        width: 300px;
+        height: 300px;
+        background-color: rgb(20, 20, 122);
+        color: white;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        animation: rotate 3s cubic-bezier(1, 1, 1, 1);
+        animation-iteration-count: 1;
+        background-size: 0% 100%;
+        transition: background-size 1.5s ease-in-out;
+        background-repeat: no-repeat;
+
+    }
+
+    .box:hover {
+        background-image: linear-gradient(to right, rgb(20, 20, 122), rgb(40, 0, 53), rgb(90, 9, 165));
+        background-size: 100% 100%;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0);
+        }
+
+        25% {
+            /* transform: scal      q[[Xe(0.9); */
+
+        }
+
+        50% {
+            transform: rotate(360deg);
+            border-radius: 50%;
+        }
+
+        100% {
+            transform: rotate(360deg);
+            border-radius: 50%;
+
+        }
+
+    }
+</style>
+
+<body>
+    <div class="box">devteeny</div>
+    <!-- <button class="glow">Hello</button> -->
+
+</body>
+
+</html>

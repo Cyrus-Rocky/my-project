@@ -1,0 +1,56 @@
+<div class="container">
+    <fieldset>
+        <legend>Personal info:</legend>
+        <div class="email">
+            <label for="">Email:
+                <input type="text" placeholder="Enter email">
+            </label>
+        </div>
+        <div class="password">
+            <label for="">Password:
+                <input type="text" placeholder="Enter password">
+            </label>
+        </div>
+        <button class="submit-btn">Submit</button>
+    </fieldset>
+</div>
+
+<style>
+    fieldset {
+        max-width: 100%;
+        border-radius: 5px;
+        font-weight: bold;
+        background-image: url(bg.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    input {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid rgb(221, 69, 9);
+        padding: 20px;
+        max-width: 100%;
+        background-color: inherit;
+    }
+
+    input:focus {
+        outline: none;
+        border-bottom: 3px solid rgb(221, 69, 9);
+    }
+
+    .email {
+        display: flex;
+    }
+
+    .submit-btn {
+        border: none;
+        padding: 1em;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: rgb(202, 24, 24);
+        margin: 2;
+    }
+</style>

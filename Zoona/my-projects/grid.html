@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root {
+        --color: rgb(255, 196, 119);
+        --color2: rgb(180, 102, 0);
+        --color3: rgb(75, 43, 1);
+        /* --color3: #1C2529; */
+        --color4: rgb(253, 209, 151);
+        /* --color4: #A1D1B1; */
+        --color5: rgb(197, 167, 127);
+    }
+
+    * {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+
+    body {
+        /* display: grid; */
+        background-color: rgb(204, 204, 209);
+    }
+
+    .container {
+        display: grid;
+        background-color: var(--color);
+        grid-template-areas:
+            "header header header"
+            "sideleft sidemiddle sideright"
+            "footer footer footer"
+        ;
+        grid-template-columns: auto 1fr 1fr;
+        grid-template-rows: 1fr 3fr 1fr;
+        gap: 10px;
+        padding: 1rem;
+        border-radius: 10px;
+        height: 100vh;
+        color: var(--color4);
+    }
+
+    .header {
+        padding: 20px;
+        background-color: var(--color2);
+        grid-area: header;
+        border-radius: 10px;
+        justify-content: space-between;
+        align-items: center;
+        display: grid;
+        grid-auto-flow: column;
+    }
+
+    .sideleft {
+        background-color: var(--color3);
+        grid-area: sideleft;
+        border-radius: 10px;
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+        padding: 50px;
+    }
+
+    .sidemiddle {
+        display: grid;
+        background-color: var(--color2);
+        text-align: center;
+        grid-area: sidemiddle;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "up up"
+            "down down";
+        gap: 10px;
+        padding: 1rem;
+        border-radius: 10px;
+
+    }
+
+    .sideright {
+        background-color: var(--color3);
+        grid-area: sideright;
+        text-align: center;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color2);
+        grid-area: footer;
+        border-radius: 10px;
+        padding: 20px;
+        position: sticky;
+        bottom: 0;
+        left: 0;
+    }
+
+    .up {
+        background-color: var(--color4);
+        grid-area: up;
+        border-radius: 10px;
+        color: var(--color3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .down {
+        background-color: var(--color5);
+        grid-area: down;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: center;
+        gap: 10px;
+    }
+
+    @media(max-width: 768px) {
+        .container {
+            grid-template-areas:
+                "header"
+                "sideleft "
+                "sidemiddle "
+                "sideright"
+                "footer ";
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .nav-links {
+        text-decoration: none;
+        font-size: 18px;
+        color: var(--color4);
+        font-weight: 600;
+        text-align: center;
+        transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    }
+
+    .nav-links:hover {
+        border-radius: 5px;
+        padding: 10px;
+        background-color: var(--color3);
+    }
+
+    .sideleft a {
+        text-decoration: none;
+        color: var(--color4);
+        display: flex;
+        justify-content: center;
+    }
+
+    .sideleft a:hover {
+        text-decoration: underline;
+    }
+
+    .sideleft li {
+        list-style: none;
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Cyrus Blog</h1>
+            <div class="navbar">
+                <a href="#" class="nav-links">
+                    HOME
+                </a>
+                <a href="#" class="nav-links">
+                    ABOUT
+                </a>
+                <a href="#" class="nav-links">
+                    PROJECT
+                </a>
+                <a href="#" class="nav-links">
+                    CONTACT
+                </a>
+
+            </div>
+        </div>
+        <div class="sideleft">
+            <h2>Latest blogs</h2>
+            <li><a href="https://www.google.com" target="_blank">Google</a></li>
+            <li><a href="https://www.wikipedia.org" target="_blank">Wikipedia</a></li>
+            <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
+            <li><a href="https://www.stackoverflow.com" target="_blank">Stack Overflow</a></li>
+            <li><a href="https://www.medium.com" target="_blank">Medium</a></li>
+            <li><a href="https://www.coursera.org" target="_blank">Coursera</a></li>
+            <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
+            <li><a href="https://www.khanacademy.org" target="_blank">Khan Academy</a></li>
+            <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+            <li><a href="https://www.reddit.com" target="_blank">Reddit</a></li>
+
+        </div>
+        <div class="sidemiddle">
+            <div class="up">insider1</div>
+            <div class="down">insider2</div>
+        </div>
+        <div class="sideright">Side Right</div>
+        <div class="footer">&#169 Cyrus 2025</div>
+    </div>
+
+</body>
+
+</html>
